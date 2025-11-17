@@ -1,13 +1,13 @@
 /* ==================== BASE & GÉNÉRAL ==================== */
 body {
-    margin: 0; /* Marge à zéro pour éviter les barres de défilement indésirables */
+    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #ffffff;
 }
 
 span {
-    color: rgb(53, 158, 172); /* Couleur principale (accent) */
+    color: rgb(53, 158, 172);
 }
 
 a {
@@ -35,7 +35,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     display: block;
-    margin: 10px auto; /* Centrer le bouton */
+    margin: 10px auto;
     transition: background-color 0.3s;
 }
 
@@ -49,7 +49,7 @@ header {
     justify-content: space-between;
     background-color: black;
     color: white;
-    padding: 30px 100px; /* Grand padding pour l'écran large */
+    padding: 30px 100px;
     align-items: center;
 }
 
@@ -70,7 +70,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 100px; /* Ajout d'un padding conséquent */
+    padding: 80px 100px;
     gap: 50px;
 }
 
@@ -85,16 +85,15 @@ nav a:hover {
 
 .container p {
     font-family: serif;
-    font-size: 1.2rem; /* Taille augmentée pour l'impact */
+    font-size: 1.2rem;
     text-align: center;
 }
 
 #accueil div > img {
     border-radius: 10px;
-    width: 350px; /* Taille pour l'écran large */
+    width: 350px;
     height: auto;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-    /* Suppression des propriétés position, top et transform complexes */
 }
 
 /* ==================== À PROPOS (#apropos) ==================== */
@@ -114,7 +113,7 @@ nav a:hover {
 }
 
 .profil-container .profil {
-    flex-basis: 60%; /* Donne plus de place au texte */
+    flex-basis: 60%;
 }
 
 #apropos p {
@@ -141,14 +140,13 @@ nav a:hover {
 
 .projets-container {
     display: flex;
-    justify-content: center; /* Centrer les cartes */
+    justify-content: center;
     gap: 30px;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .projet-card {
-    /* Calcul pour 3 cartes par ligne avec espace */
     width: calc(33.333% - 20px); 
     background: #f2f2f2;
     padding: 20px;
@@ -244,7 +242,7 @@ nav a:hover {
 
 #contact h1 {
     margin-bottom: 10px;
-    color: white; /* S'assurer que le titre est visible */
+    color: white;
 }
 
 #contact h2 {
@@ -279,109 +277,12 @@ nav a:hover {
     border: none;
     font-size: 1rem;
 }
-
-textarea{
-    height: 150px;
-    resize: none;
-}
-
-#contact button{
-    background-color: rgb(53, 158, 172);
-    border: none;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    color: white;
-    cursor: pointer;
-    margin-top: 0; /* Éviter la double marge du bouton */
-}
-
-#contact button:hover{
-    background-color: rgb(42, 128, 138);
-}
-
-
-/* ==================== PIED DE PAGE (FOOTER) ==================== */
-footer{
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 100px;
-    background-color: #eee;
-}
-
-/* ==================== ADAPTATIVITÉ (MEDIA QUERIES) ==================== */
-
-@media (max-width: 900px) {
-    /* Ajustements généraux pour tablettes et mobiles */
-    header, #accueil, #apropos, #projets, #competences, footer {
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-
-    /* HEADER */
-    header {
-        flex-direction: column; /* Empiler le titre et la navigation */
-        text-align: center;
-    }
-    nav ul {
-        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
-        justify-content: center;
-        margin-top: 15px;
-    }
-
-    /* ACCUEIL et À PROPOS */
-    #accueil, .profil-container {
-        flex-direction: column; /* Empiler le texte et l'image */
-        text-align: center;
-    }
-    
-    #accueil div > img {
-        width: 100%; /* L'image prend toute la largeur disponible */
-        max-width: 300px;
-    }
-
-    /* PROJETS */
-    .projets-container {
-        gap: 20px;
-    }
-    .projet-card {
-        width: calc(50% - 15px); /* Deux cartes par ligne sur tablette */
-        min-width: 250px; /* S'assurer qu'elles ne sont pas trop petites */
-    }
-
-    /* COMPÉTENCES */
-    .competences-grid {
-        flex-direction: column; /* Vos règles originales */
-        gap: 20px;
-    }
-    .skills-column {
-        width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    /* Ajustements spécifiques pour téléphones */
-    
-    /* PROJETS (Passe à une seule colonne) */
-    .projet-card {
-        width: 95%; /* Une seule carte par ligne sur mobile */
-    }
-
-    /* CONTACT (Empiler les champs nom/prénom) */
-    .form-row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* FOOTER */
+/* FOOTER */
     footer {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
         text-align: center;
         gap: 5px;
+        justify-content: space-between;
     }
 }
