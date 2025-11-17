@@ -277,12 +277,117 @@ nav a:hover {
     border: none;
     font-size: 1rem;
 }
-/* FOOTER */
+
+textarea{
+    height: 150px;
+    resize: none;
+}
+
+#contact button{
+    background-color: rgb(53, 158, 172);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 0;
+}
+
+#contact button:hover{
+    background-color: rgb(42, 128, 138);
+}
+
+
+/* ==================== PIED DE PAGE (FOOTER) ==================== */
+footer{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: #eee;
+}
+
+footer a {
+    color: #333;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: rgb(53, 158, 172);
+}
+
+/* ==================== ADAPTATIVITÉ (MEDIA QUERIES) ==================== */
+
+@media (max-width: 900px) {
+    
+    header, #accueil, #apropos, #projets, #competences, footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* HEADER */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    /* ACCUEIL et À PROPOS */
+    #accueil, .profil-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #accueil div > img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* PROJETS */
+    .projets-container {
+        gap: 20px;
+    }
+    .projet-card {
+        width: calc(50% - 15px);
+        min-width: 250px;
+    }
+
+    /* COMPÉTENCES */
+    .competences-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .skills-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    /* PROJETS */
+    .projet-card {
+        width: 95%;
+    }
+
+    /* CONTACT */
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* FOOTER */
     footer {
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         gap: 5px;
-        justify-content: space-between;
     }
 }
