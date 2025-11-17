@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <h2>Calculateur de prêt hypothécaire</h2>
+
+  <form id="formulaire">
+    <label>Montant du prêt (P) :</label><br>
+    <input type="number" id="montant" placeholder="Ex: 100000" required><br><br>
+
+    <label>Taux d'intérêt annuel (%) :</label><br>
+    <input type="number" id="taux" step="0.01" placeholder="Ex: 5" required><br><br>
+
+    <label>Durée du prêt (en années) :</label><br>
+    <input type="number" id="duree" placeholder="Ex: 20" required><br><br>
+
+    <button type="button" onclick="calculerPaiement()">Calculer</button>
+  </form>
+
+  <hr>
+  <p id="resultat"></p>
+
+  <script>
+    function calculerPaiement() {
+      // Récupération des valeurs saisies
+      let montant = parseFloat(document.getElementById("montant").value);
+      let tauxAnnuel = parseFloat(document.getElementById("taux").value);
+      let dureeAnnees = parseInt(document.getElementById("duree").value);
+
+      // Vérification des valeurs
+      if (isNaN(montant) || montant <= 0) {
+        alert("Veuillez entrer un montant de prêt valide (supérieur à 0).");
+        return;
+      }
+      if (isNaN(tauxAnnuel) || tauxAnnuel <= 0) {
+        alert("Veuillez entrer un taux d'intérêt annuel valide (supérieur à 0).");
+        return;
+      }
+      if (isNaN(dureeAnnees) || dureeAnnees <= 0) {
+        alert("Veuillez entrer une durée valide (supérieure à 0).");
+        return;
+      }
+
+      // Calculs
+      let r = (tauxAnnuel / 100) / 12; // taux mensuel (en décimal)
+      let n = dureeAnnees * 12;        // nombre total de paiements
+
+      // Formule de calcul du paiement mensuel
+      let M = montant * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+
+      // Vérifie si le calcul est valide
+      if (isNaN(M) || !isFinite(M)) {
+        alert("Erreur dans le calcul. Vérifiez vos entrées.");
+        return;
+      }
+
+      // Affiche le résultat arrondi à 2 décimales
+      document.getElementById("resultat").innerHTML =
+        "Paiement mensuel estimé : <strong>" + M.toFixed(2) + " $</strong>";
+    }
+  </script>
+</body>
+</html>
