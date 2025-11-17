@@ -1,42 +1,33 @@
-body{
-    margin: 30px;
+/* ==================== BASE & GÉNÉRAL ==================== */
+body {
+    margin: 0; /* Marge à zéro pour éviter les barres de défilement indésirables */
     font-family: Arial, sans-serif;
-    border: #f8fdfd 5px solid;
+    line-height: 1.6;
+    background-color: #ffffff;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
-    padding: 30px 100px;
-    align-items: center;
+span {
+    color: rgb(53, 158, 172); /* Couleur principale (accent) */
 }
 
-ul{
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-span{
-    color: rgb(53, 158, 172);
-}
-
-a{
+a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
-#accueil{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 30px;
-    position: relative;
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #222;
 }
 
-button{
+h2 {
+    text-align: center;
+}
+
+button {
     background-color: rgb(53, 158, 172);
     color: white;
     border: none;
@@ -44,42 +35,86 @@ button{
     border-radius: 10px;
     cursor: pointer;
     display: block;
+    margin: 10px auto; /* Centrer le bouton */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: rgb(42, 128, 138);
+}
+
+/* ==================== EN-TÊTE (HEADER) ==================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 30px 100px; /* Grand padding pour l'écran large */
     align-items: center;
 }
 
-div>p{
-    font-family: serif;
-    font-size: 1.0rem;
-    text-align: center;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a:hover {
+    color: rgb(53, 158, 172);
+}
+
+/* ==================== ACCUEIL (#accueil) ==================== */
+#accueil {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px; /* Ajout d'un padding conséquent */
+    gap: 50px;
 }
 
 .container {
     display: flex;
-    flex-direction: column;  
-    align-items: center;    
-    justify-content: center;  
-    height: 100%;            
-    text-align: center;     
+    flex-direction: column;  
+    align-items: center;    
+    justify-content: center;  
+    height: 100%;            
+    text-align: center;     
 }
 
-div>img{
+.container p {
+    font-family: serif;
+    font-size: 1.2rem; /* Taille augmentée pour l'impact */
+    text-align: center;
+}
+
+#accueil div > img {
     border-radius: 10px;
-    position: relative; 
-    top: 40px;        
-    transform: translateX(10%); 
-    width: 300px;
-    height: 200px;
+    width: 350px; /* Taille pour l'écran large */
+    height: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    /* Suppression des propriétés position, top et transform complexes */
 }
 
+/* ==================== À PROPOS (#apropos) ==================== */
+#apropos {
+    padding: 40px 100px;
+}
 
-.profil-container{
+.profil-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    margin: 30px;
-    position: relative;
+    gap: 40px;
+    margin-top: 30px;
     background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.profil-container .profil {
+    flex-basis: 60%; /* Donne plus de place au texte */
 }
 
 #apropos p {
@@ -98,39 +133,34 @@ div>img{
     box-shadow: 0 4px 10px hsla(180, 68%, 35%, 0.692);
 }
 
-h1{ 
-    text-align: center;
-    margin-top: 20px;
-}
-
-h2{
-    text-align: center;
-}
-
-/* ---------------- PROJETS ---------------- */
+/* ==================== PROJETS (#projets) ==================== */
 #projets {
-    padding: 40px;
+    padding: 40px 100px;
     text-align: center;
 }
 
 .projets-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Centrer les cartes */
+    gap: 30px;
     margin-top: 20px;
     flex-wrap: wrap;
 }
 
 .projet-card {
-    width: 20%;
+    /* Calcul pour 3 cartes par ligne avec espace */
+    width: calc(33.333% - 20px); 
     background: #f2f2f2;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-bottom: 20px;
+    text-align: left;
 }
 
-.projet-card h2 {
+.projet-card h3 { 
     color: rgb(53, 158, 172);
+    text-align: center;
 }
 
 .projet-card button {
@@ -139,6 +169,8 @@ h2{
     border: none;
     border-radius: 5px;
     background: rgb(53, 158, 172);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .projet-card button a {
@@ -146,70 +178,63 @@ h2{
     text-decoration: none;
 }
 
+/* ==================== COMPÉTENCES (#competences) ==================== */
+#competences {
+    padding: 40px 100px;
+}
 
 #competences .titre-section {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #222;
-  font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #222;
+    font-weight: 700;
 }
 
 .competences-grid {
-  display: flex;
-  justify-content: space-between;
-  max-width: 900px;
-  margin: 0 auto;
-  gap: 40px;
-  padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 20px;
 }
 
 .skills-column {
-  width: 48%;
+    width: 48%;
 }
 
 .skills-column h2 {
-  margin-bottom: 20px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #222;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #222;
 }
 
 .skill {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .skill span {
-  font-weight: 600;
-  color: #333;
+    font-weight: 600;
+    color: #333;
 }
 
 .bar {
-  width: 100%;
-  height: 8px;
-  background: #e7eef6;
-  border-radius: 10px;
-  margin-top: 6px;
+    width: 100%;
+    height: 8px;
+    background: #e7eef6;
+    border-radius: 10px;
+    margin-top: 6px;
 }
 
 .bar div {
-  background: #29a6ff;
-  height: 100%;
-  border-radius: 10px;
-  transition: width 1s ease;
+    background: #29a6ff;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease;
 }
 
-@media (max-width: 768px) {
-  .competences-grid {
-    flex-direction: column;
-  }
-
-  .skills-column {
-    width: 100%;
-  }
-}
-
-/* SECTION CONTACT */
+/* ==================== CONTACT (#contact) ==================== */
 #contact{
     background-color: rgb(7, 5, 19);
     color: white;
@@ -219,6 +244,7 @@ h2{
 
 #contact h1 {
     margin-bottom: 10px;
+    color: white; /* S'assurer que le titre est visible */
 }
 
 #contact h2 {
@@ -227,7 +253,6 @@ h2{
     color: rgb(200, 200, 200);
 }
 
-/* FORMULAIRE */
 #contact form{
     max-width: 600px;
     margin: 0 auto;
@@ -240,7 +265,6 @@ h2{
     gap: 25px;
 }
 
-/* Lignes de formulaire */
 .form-row{
     display: flex;
     flex-direction: row;
@@ -256,13 +280,11 @@ h2{
     font-size: 1rem;
 }
 
-/* Champ message */
 textarea{
     height: 150px;
     resize: none;
 }
 
-/* Bouton */
 #contact button{
     background-color: rgb(53, 158, 172);
     border: none;
@@ -271,6 +293,7 @@ textarea{
     font-size: 1.1rem;
     color: white;
     cursor: pointer;
+    margin-top: 0; /* Éviter la double marge du bouton */
 }
 
 #contact button:hover{
@@ -278,9 +301,87 @@ textarea{
 }
 
 
+/* ==================== PIED DE PAGE (FOOTER) ==================== */
 footer{
-   display: flex; 
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px 100px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+    background-color: #eee;
+}
+
+/* ==================== ADAPTATIVITÉ (MEDIA QUERIES) ==================== */
+
+@media (max-width: 900px) {
+    /* Ajustements généraux pour tablettes et mobiles */
+    header, #accueil, #apropos, #projets, #competences, footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* HEADER */
+    header {
+        flex-direction: column; /* Empiler le titre et la navigation */
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap; /* Permet aux liens de passer à la ligne */
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    /* ACCUEIL et À PROPOS */
+    #accueil, .profil-container {
+        flex-direction: column; /* Empiler le texte et l'image */
+        text-align: center;
+    }
+    
+    #accueil div > img {
+        width: 100%; /* L'image prend toute la largeur disponible */
+        max-width: 300px;
+    }
+
+    /* PROJETS */
+    .projets-container {
+        gap: 20px;
+    }
+    .projet-card {
+        width: calc(50% - 15px); /* Deux cartes par ligne sur tablette */
+        min-width: 250px; /* S'assurer qu'elles ne sont pas trop petites */
+    }
+
+    /* COMPÉTENCES */
+    .competences-grid {
+        flex-direction: column; /* Vos règles originales */
+        gap: 20px;
+    }
+    .skills-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Ajustements spécifiques pour téléphones */
+    
+    /* PROJETS (Passe à une seule colonne) */
+    .projet-card {
+        width: 95%; /* Une seule carte par ligne sur mobile */
+    }
+
+    /* CONTACT (Empiler les champs nom/prénom) */
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
 }

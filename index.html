@@ -14,7 +14,7 @@
                 <li> <a href="#accueil"><span>Accueil</span></a></li>
                 <li> <a href="#apropos">À propos</a></li>
                 <li> <a href="#projets">Projet</a></li>
-                <li> <a href="#competances">Competances</a></li>
+                <li> <a href="#competences">Compétences</a></li> 
                 <li> <a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -28,168 +28,167 @@
         <div><img src="image.png" alt="Image de devoppement web" width="300" height="200"> </div>
     </section>
 
-     <section id="apropos">
-      <h1><span>À propos</span></h1> 
-     <div class="profil-container">
-        <div class="profil">
-         <p>Je suis <span>Franceska Love JEAN</span>, étudiante en développement web et future développeuse passionnée par l’univers du numérique.</p>
-         <p>Curieuse et motivée, j’explore les langages, outils et technologies qui permettent de créer des expériences interactives et modernes.</p>
-         <p>J’aime allier créativité et logique pour progresser et contribuer à des projets web innovants.</p>
-         <button><a href="Mon CV.pdf" download="">Télécharger mon CV</a></button>
-</div>
-<div>
-  <img class="profil" src="Alice.png" alt="Image de devoppement web" width="200" height="200">    
+    <section id="apropos">
+        <h1><span>À propos</span></h1> 
+        <div class="profil-container">
+            <div class="profil">
+                <p>Je suis <span>Franceska Love JEAN</span>, étudiante en développement web et future développeuse passionnée par l’univers du numérique.</p>
+                <p>Curieuse et motivée, j’explore les langages, outils et technologies qui permettent de créer des expériences interactives et modernes.</p>
+                <p>J’aime allier créativité et logique pour progresser et contribuer à des projets web innovants.</p>
+                <button><a href="Mon CV.pdf" download="">Télécharger mon CV</a></button>
+            </div>
+            <div>
+                <img class="profil" src="Alice.png" alt="Image de devoppement web" width="200" height="200">    
+            </div>
         </div>
-     </div>
     </section>
-  
-<section id="projets">
-  <h1><span>Mes Projets</span></h1>
-    <div class="projets-container">
+ 
+    <section id="projets">
+        <h1><span>Mes Projets</span></h1>
+        <div class="projets-container">
 
-        
-        <div class="projet-card">
-            <h3><span>1 : carte mentale</span></h2>
-            <p>Création d'une carte mentale sur les base du web</p>
-            <button><a href="Carte mentale.pdf">Voir le projet</a></button>
+            <div class="projet-card">
+                <h3><span>1 : carte mentale</span></h3>
+                <p>Création d'une carte mentale sur les base du web</p>
+                <button><a href="Carte mentale.pdf">Voir le projet</a></button>
+            </div>
+
+            <div class="projet-card">
+                <h3><span>2 : Calculatreur de Prêt hypothécaire</span></h3>
+                <p>Une calculatrice simple réalisée avec JavaScript.</p>
+                <button><a href="exercice6.html">Voir le projet</a></button>
+            </div>
+
+            <div class="projet-card">
+                <h3><span>3 : Page d’accueil</span></h3>
+                <p>Realisation de mon portfolio</p>
+                <button><a href="index.html">Voir le projet</a></button>
+            </div>
+
         </div>
+    </section>
 
-        
-        <div class="projet-card">
-            <h3><span>2 : Calculatreur de Prêt hypothécaire</span></h3>
-            <p>Une calculatrice simple réalisée avec JavaScript.</p>
-            <button><a href="exercice6.html">Voir le projet</a></button>
+    <section id="competences"> 
+        <h1 class="titre-section">Mes Compétences</h1>
+
+        <div class="competences-grid">
+
+            <div class="skills-column">
+                <h2>Soft Skills</h2>
+
+                <div class="skill">
+                    <span>Travail Social</span>
+                    <div class="bar"><div style="width: 85%;"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>Gestion de projet</span>
+                    <div class="bar"><div style="width: 90%;"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>Leadership</span>
+                    <div class="bar"><div style="width: 85%;"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>Enquête et Analyse</span>
+                    <div class="bar"><div style="width: 80%;"></div></div>
+                </div>
+            </div>
+
+            <div class="skills-column">
+                <h2>Hard Skills</h2>
+
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="bar"><div style="width: 80%;"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="bar"><div style="width: 75%;"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="bar"><div style="width: 60%;"></div></div>
+                </div>
+
+                <div class="skill">
+                    <span>MS Office</span>
+                    <div class="bar"><div style="width: 80%;"></div></div>
+                </div>
+            </div>
+
         </div>
+    </section>
+    
+    <section id="contact">
+        <h1>Vous avez un projet en tête ?</h1>
+        <h2>Contactez-moi !</h2>
 
-      
-        <div class="projet-card">
-            <h3><span>3 : Page d’accueil</span></h2>
-            <p>Realisation de mon portfolio</p>
-            <button><a href="index.html">Voir le projet</a></button>
-        </div>
+        <form id="contactForm">
 
-    </div>
-</section>
+            <div class="form-row">
+                <input type="text" id="nom" placeholder="Votre nom" required> 
+                <input type="text" id="prenom" placeholder="Votre prénom" required>
+            </div>
 
-<section id="competences">
-  <h1 class="titre-section">Mes Compétences</h1>
+            <div class="form-row">
+                <input type="email" id="email" placeholder="Votre email" required>
+            </div>
 
-  <div class="competences-grid">
+            <div class="form-row">
+                <textarea id="message" placeholder="Votre message" required></textarea>
+            </div>
 
-    <div class="skills-column">
-      <h2>Soft Skills</h2>
+            <button type="submit">Envoyer</button>
 
-      <div class="skill">
-        <span>Travail Social</span>
-        <div class="bar"><div style="width: 85%;"></div></div>
-      </div>
+        </form>
+    </section>
 
-      <div class="skill">
-        <span>Gestion de projet</span>
-        <div class="bar"><div style="width: 90%;"></div></div>
-      </div>
+    <footer>
+        <p>Réalisé par <span>Franceska Love JEAN</span></p>
+        <p>Tous droits réservés-2025</p>
+    </footer>
 
-      <div class="skill">
-        <span>Leadership</span>
-        <div class="bar"><div style="width: 85%;"></div></div>
-      </div>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(e){
+            e.preventDefault(); 
 
-      <div class="skill">
-        <span>Enquête et Analyse</span>
-        <div class="bar"><div style="width: 80%;"></div></div>
-      </div>
-    </div>
+            const nom = document.getElementById("nom").value.trim();
+            const prenom = document.getElementById("prenom").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-    <!-- HARD SKILLS -->
-    <div class="skills-column">
-      <h2>Hard Skills</h2>
+            if(nom === "" || prenom === "" || email === "" || message === ""){
+                alert("Veuillez remplir tous les champs.");
+                return;
+            }
 
-      <div class="skill">
-        <span>HTML</span>
-        <div class="bar"><div style="width: 80%;"></div></div>
-      </div>
+            if(!email.includes("@") || !email.includes(".")){
+                alert("Veuillez entrer un email valide.");
+                return;
+            }
+            alert("Message envoyé avec succès !");
+        });
+    </script>
+    
+    <script>
+        const projets = document.querySelectorAll(".projet-card");
 
-      <div class="skill">
-        <span>CSS</span>
-        <div class="bar"><div style="width: 75%;"></div></div>
-      </div>
+        projets.forEach(card => {
+            card.addEventListener("mouseover", () => {
+                card.style.transform = "scale(1.05)";
+                card.style.transition = "0.3s";
+            });
 
-      <div class="skill">
-        <span>JavaScript</span>
-        <div class="bar"><div style="width: 60%;"></div></div>
-      </div>
-
-      <div class="skill">
-        <span>MS Office</span>
-        <div class="bar"><div style="width: 80%;"></div></div>
-      </div>
-    </div>
-
-  </div>
-<section id="contact">
-  <h1>Vous avez un projet en tête ?</h1>
-  <h2>Contactez-moi !</h2>
-
-  <form id="contactForm">
-
-    <div class="form-row">
-      <input type="text" placeholder="Votre nom">
-      <input type="text" placeholder="Votre prénom">
-    </div>
-
-    <div class="form-row">
-      <input type="email" placeholder="Votre email">
-    </div>
-
-    <div class="form-row">
-      <textarea placeholder="Votre message"></textarea>
-    </div>
-
-    <button type="submit">Envoyer</button>
-
-  </form>
-</section>
-
-<footer>
-  <p>Réalisé par <span>Franceska Love JEAN</span></p>
-  <p>Tous droits réservés-2025</p>
-</footer>
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault(); // Empêche l'envoi pour vérifier d'abord
-
-    const nom = document.getElementById("nom").value.trim();
-    const prenom = document.getElementById("prenom").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if(nom === "" || prenom === "" || email === "" || message === ""){
-        alert("Veuillez remplir tous les champs.");
-        return;
-    }
-
-    if(!email.includes("@") || !email.includes(".")){
-        alert("Veuillez entrer un email valide.");
-        return;
-    }
-    alert("Message envoyé avec succès !");
-});
-</script>
-<script>
-// Animation JS sur les projets
-const projets = document.querySelectorAll(".projet-card");
-
-projets.forEach(card => {
-    card.addEventListener("mouseover", () => {
-        card.style.transform = "scale(1.05)";
-        card.style.transition = "0.3s";
-    });
-
-    card.addEventListener("mouseout", () => {
-        card.style.transform = "scale(1)";
-    });
-});
-</script>
+            card.addEventListener("mouseout", () => {
+                card.style.transform = "scale(1)";
+            });
+        });
+    </script>
 
 </body>
 </html>
